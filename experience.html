@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div id="app">{{ msg }}</div> -->
+    <!-- <div id="app" v-html="msg"></div> -->
+    <div id="app" v-text="msg"></div>
+    <script src="./vue.js"></script>
+    <script>
+      /*
+        什么是vue vue是一个渐进式的javascript框架
+        vue是mvvm框架
+        m module 数据模块层
+        v view 视图层
+        vm viewmodule 视图模块层
+        */
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          msg: "vue初体验000",
+        },
+      });
+    </script>
+  </body>
+</html>

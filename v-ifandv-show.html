@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="judge">{{ isShow ? '隐藏' : '显示' }}</button>
+      <!-- <p v-if="isShow">{{ msg }}</p> -->
+      <p v-show="isShow">{{ msg }}</p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          msg: "显示隐藏",
+          isShow: true,
+        },
+        methods: {
+          judge() {
+            this.isShow = !this.isShow;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
